@@ -1,7 +1,7 @@
 //* *****************************************************************************
- *  Nome:    Diogo Montez de Sousa
- *  No. de aluno:   93794
- *  Curso: Engenharia Inform·tica (PL)
+ *  Nome:    
+ *  No. de aluno:   
+ *  Curso: Engenharia Inform√°tica (PL)
  *
  *  Outro(s) integrante(s):
  *  Nome:  N/A 
@@ -16,70 +16,70 @@ Enunciado 2:  Autocomplete
 
 
 /* *****************************************************************************
- *  Descreva como o seu mÈtodo firstIndexOf() do BinarySearchDeluxe.java
- *  encontra o primeiro Ìndice de uma chave que È igual ‡ chave de pesquisa.
+ *  Descreva como o seu m√©todo firstIndexOf() do BinarySearchDeluxe.java
+ *  encontra o primeiro √≠ndice de uma chave que √© igual √† chave de pesquisa.
  **************************************************************************** */
-O mÈtodo implementa o BinarySearch com ligeiras modificaÁıes. Antes de entrar no
-loop do BinarySearch cl·ssico, o mÈtodo verifica se o primeiro elemento do array
-È igual ‡ chave que procuramos e nesse caso retorna de imediato o Ìndice 0. 
-A necessidade desta alteraÁ„o ficar· clara de seguida, mas serve para evitar que
-o algoritmo aceda a uma posiÁ„o inv·lida (-1) do array. Se a chave n„o se encontra 
-na primeira posiÁ„o È inciado o loop do BinarySearch. 
+O m√©todo implementa o BinarySearch com ligeiras modifica√ß√µes. Antes de entrar no
+loop do BinarySearch cl√°ssico, o m√©todo verifica se o primeiro elemento do array
+√© igual √† chave que procuramos e nesse caso retorna de imediato o √≠ndice 0. 
+A necessidade desta altera√ß√£o ficar√° clara de seguida, mas serve para evitar que
+o algoritmo aceda a uma posi√ß√£o inv√°lida (-1) do array. Se a chave n√£o se encontra 
+na primeira posi√ß√£o √© inciado o loop do BinarySearch. 
 
-Como se assume que o array j· est· ordenado segundo o comparator recebido, o 
+Como se assume que o array j√° est√° ordenado segundo o comparator recebido, o 
 algoritmo vai dividindo o array original em metades sucessivas. Caso a chave 
 procurada seja inferior/superior (segundo o comparator) ao ponto central do 
 array, descarta-se a metade superior/inferior do array. Assim que encontre um 
-Ìndice central cujo conte˙do seja igual ‡ chave procurada, o algoritmo (ao 
-contr·rio do BinarySearch cl·ssico) n„o retorna de imediato. Em vez disso, 
-verifica sucessivamente se a posiÁ„o imediatamente inferior do array tem o mesmo 
-conte˙do. Nesse caso, estamos perante uma repetiÁ„o com posiÁ„o inferior. Assim 
-que verifique que o conte˙do "‡ esquerda" n„o È igual ‡ chave retorna o Ìndice,
-que ir· corresponder ao primeiro Ìndice com conte˙do igual ‡ chave procurada.
+√≠ndice central cujo conte√∫do seja igual √† chave procurada, o algoritmo (ao 
+contr√°rio do BinarySearch cl√°ssico) n√£o retorna de imediato. Em vez disso, 
+verifica sucessivamente se a posi√ß√£o imediatamente inferior do array tem o mesmo 
+conte√∫do. Nesse caso, estamos perante uma repeti√ß√£o com posi√ß√£o inferior. Assim 
+que verifique que o conte√∫do "√† esquerda" n√£o √© igual √† chave retorna o √≠ndice,
+que ir√° corresponder ao primeiro √≠ndice com conte√∫do igual √† chave procurada.
 
-Caso os Ìndices de pesquisa lo e hi se cruzem sem retornar qualquer Ìndice,
-termina o while e retorna -1, o que significa que o array n„o contÈm a chave.
+Caso os √≠ndices de pesquisa lo e hi se cruzem sem retornar qualquer √≠ndice,
+termina o while e retorna -1, o que significa que o array n√£o cont√©m a chave.
 
-A verificaÁ„o inicial È necess·ria porque caso contr·rio, quando o primeiro
-Ìndice (0) tivesse a chave que procuramos, o algoritmo iria verificar se o 
-elemento anterior a 0 (-1) È igual ao prÛprio elemento no Ìndice 0. Isto
-iria resultar num erro de acesso ao array, pois n„o existe posiÁ„o -1. 
+A verifica√ß√£o inicial √© necess√°ria porque caso contr√°rio, quando o primeiro
+√≠ndice (0) tivesse a chave que procuramos, o algoritmo iria verificar se o 
+elemento anterior a 0 (-1) √© igual ao pr√≥prio elemento no √≠ndice 0. Isto
+iria resultar num erro de acesso ao array, pois n√£o existe posi√ß√£o -1. 
 
 
 /* *****************************************************************************
- *  Identificar qual algoritmo de ordenaÁ„o (se houver) o seu programa utiliza no
- *  construtor do Autocomplete e nos mÈtodos de inst‚ncia. 
- *  Escolha uma das seguintes opÁıes:
+ *  Identificar qual algoritmo de ordena√ß√£o (se houver) o seu programa utiliza no
+ *  construtor do Autocomplete e nos m√©todos de inst√¢ncia. 
+ *  Escolha uma das seguintes op√ß√µes:
  *
  *    none, selection sort, insertion sort, mergesort, quicksort, heapsort
  *
- *  Se estiver a utilizar uma implementaÁ„o optimizada, tal como Arrays.sort(),
- *  selecione o algoritmo que È utilizado internamente.
+ *  Se estiver a utilizar uma implementa√ß√£o optimizada, tal como Arrays.sort(),
+ *  selecione o algoritmo que √© utilizado internamente.
  **************************************************************************** */
 
-Autocomplete() : Segundo a documentaÁ„o oficial do Java, para objetos o mÈtodo
-public static <T> void sort(T[] a, Comparator<? super T> c) utiliza uma vers„o
-do mergesort Theta(n log n). A implementaÁ„o È adaptada do TimSort originalmente 
-implementado em Python. Como neste mÈtodo n„o È passado um Comparator, a 
-ordenaÁ„o segue a ordem natural (neste caso lexicogr·fica).
+Autocomplete() : Segundo a documenta√ß√£o oficial do Java, para objetos o m√©todo
+public static <T> void sort(T[] a, Comparator<? super T> c) utiliza uma vers√£o
+do mergesort Theta(n log n). A implementa√ß√£o √© adaptada do TimSort originalmente 
+implementado em Python. Como neste m√©todo n√£o √© passado um Comparator, a 
+ordena√ß√£o segue a ordem natural (neste caso lexicogr√°fica).
 Fonte: https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html
 
-allMatches() : idÍntico ao Autocomplete(), mas com Comparator c igual a
+allMatches() : id√™ntico ao Autocomplete(), mas com Comparator c igual a
 Term.byReverseWeightOrder(), que corresponde ao Comparator definido no ficheiro
-Term.java. Deste modo, a ordenaÁ„o seguir· a ordem inversa do peso de cada
+Term.java. Deste modo, a ordena√ß√£o seguir√° a ordem inversa do peso de cada
 term no array. 
 
 
-numberOfMatches() : N„o utiliza, pois assume que o atributo terms j· foi
-ordenado na construÁ„o.
+numberOfMatches() : N√£o utiliza, pois assume que o atributo terms j√° foi
+ordenado na constru√ß√£o.
 
 /* *****************************************************************************
- *  Quantas comparaÁıes (no pior caso) cada uma das operaÁıes do
- *  Autocomplete faz, em funÁ„o do n˙mero de itens n e do n˙mero de 
- *  matching terms m? Utilize a notaÁ„o Big Theta para simplificar as
+ *  Quantas compara√ß√µes (no pior caso) cada uma das opera√ß√µes do
+ *  Autocomplete faz, em fun√ß√£o do n√∫mero de itens n e do n√∫mero de 
+ *  matching terms m? Utilize a nota√ß√£o Big Theta para simplificar as
  *  suas respostas.
  *
- *  Recorde que com a notaÁ„o Big Theta, deve descartar coeficientes
+ *  Recorde que com a nota√ß√£o Big Theta, deve descartar coeficientes
  *  e termos de ordem inferior, por exemplo, Theta(m^2 + m log n).
  **************************************************************************** */
 
@@ -93,18 +93,18 @@ numberOfMatches():  Theta(log n) -> 2 * binary search
 
 
 /* *****************************************************************************
- * Bugs / limitaÁıes conhecidas.
+ * Bugs / limita√ß√µes conhecidas.
  **************************************************************************** */
 
 
 /* *****************************************************************************
  * Descreva qualquer ajuda (se houver) que tenha recebido.
- * N„o inclua leituras, palestras, e preceitos, mas inclua qualquer ajuda de pessoas
- * (incluindo colegas do curso, amigos, monitores de laboratÛrio, etc.)
+ * N√£o inclua leituras, palestras, e preceitos, mas inclua qualquer ajuda de pessoas
+ * (incluindo colegas do curso, amigos, monitores de laborat√≥rio, etc.)
  * Identificar os colegas de curso pelo nome.
  *
- * Incluir tambÈm quaisquer recursos (incluindo a web) que possa
- * ter sido utilizados na criaÁ„o do seu desenho da soluÁ„o.
+ * Incluir tamb√©m quaisquer recursos (incluindo a web) que possa
+ * ter sido utilizados na cria√ß√£o do seu desenho da solu√ß√£o.
  **************************************************************************** */
 https://github.com/bluenight1994/Algorithm/tree/master/Assignments/Autocomplete
 https://github.com/andrew-lewin/CSIS_2420/tree/master/A03AutoComplete/src/autoComplete
@@ -119,19 +119,14 @@ https://github.com/andrew-lewin/CSIS_2420/tree/master/A03AutoComplete/src/autoCo
 /* *****************************************************************************
  * Se trabalhou com um colega, afirme abaixo que seguiu
  * o protocolo, tal como descrito no enunciado. 
- * Incluir uma frase que explica como cada um de vÛs contribuiu para o projeto.
+ * Incluir uma frase que explica como cada um de v√≥s contribuiu para o projeto.
  **************************************************************************** */
 
 
 
 
 /* *****************************************************************************
- * Listar aqui quaisquer outros coment·rios. Sinta-se ‡ vontade para dar qualquer   
+ * Listar aqui quaisquer outros coment√°rios. Sinta-se √† vontade para dar qualquer   
  * feedback sobre o quanto aprendeu ao fazer o projeto, e se    
  * gostou de o fazer.                                             
  **************************************************************************** */
-O projeto È interessante, no entanto na minha opini„o parece-me demasiado avanÁado
-para o conhecimento pr·tico de Java que um aluno de 1∫ ano do ISCTE tem, 
-tendo em conta que apenas tivemos contacto inicial em IP. A utilizaÁ„o de 
-comparators n„o foi especialmente abordada nas aulas pr·ticas, isso dificultou a 
-criaÁ„o e implementaÁ„o apenas recorrendo ‡ experiÍncia das aulas.
